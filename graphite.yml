@@ -3,7 +3,7 @@
   vars:
     graphite:
       version: master
-      timezone: Europe/Paris
+      timezone: UTC
       workers: 4
       host: 0.0.0.0
       server: graphite.local
@@ -16,13 +16,13 @@
       user: graphite
       password: graphite
   roles:
-    - common
-    - python
-    - supervisor
-    - role: nginx
-      nginx_sites: none
-    - postgres
-    - graphite
+    # - common
+    # - python
+    # - supervisor
+    # - role: nginx
+    #   nginx_sites: none
+    # - postgres
+    # - graphite
     - nodejs
     - statsd
 

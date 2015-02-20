@@ -1,13 +1,5 @@
 - include_vars: "{{ ansible_os_family }}.yml"
 
-- name: install required packages for graphite debian/ubuntu
-  apt: pkg={{ item }} state=latest
-  with_items:
-    - memcached
-    - libcairo2-dev
-    - libffi-dev # for cairocffi
-  when: ansible_os_family == "Debian"
-
 - name: install required packages for graphite redhat/centos
   yum: pkg={{ item }} state=latest
   with_items:
